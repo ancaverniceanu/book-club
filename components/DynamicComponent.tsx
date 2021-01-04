@@ -1,4 +1,4 @@
-import Teaser from './Teaser'
+import Teaser from './Teaser.tsx'
 import Feature from './Feature'
 import Grid from './Grid'
 import Placeholder from './Placeholder'
