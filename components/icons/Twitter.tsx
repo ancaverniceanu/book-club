@@ -6,7 +6,7 @@ function Icon() {
       <g fill="none" fillRule="evenodd">
         <path fill="#FFF" d="M-212-65h1340v372H-212z"></path>
         <path
-          fill="#672E9B"
+          fill="#6159E6"
           d="M34.71 61c16.419 0 25.002-15.139 27.95-30.884C65.607 14.371 48.884 4.042 32.93.481 16.98-3.079 0 13.75 0 30.116S18.292 61 34.71 61z"
         ></path>
         <path
