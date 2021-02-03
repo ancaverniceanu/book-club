@@ -1,9 +1,11 @@
+import React from 'react';
+
 const Footer = () => {
   return (
-    <footer className="text-center flex flex-col items-center py-20 container mx-auto">
+    <footer className="container flex flex-col items-center py-20 mx-auto text-center">
       Footer goes here
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
