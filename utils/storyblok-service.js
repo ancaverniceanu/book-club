@@ -1,9 +1,10 @@
+import React from 'react';
 import StoryblokClient from 'storyblok-js-client'
 
 class StoryblokService {
   constructor() {
     const { STORYBLOK_TOKEN } = process.env
-    this.devMode = false
+    this.devMode = true
     this.token = STORYBLOK_TOKEN
     this.client = new StoryblokClient({
       accessToken: this.token,
