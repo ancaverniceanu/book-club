@@ -18,7 +18,8 @@ const Navigation = ({ language }: Props) => (
           <p className="text-lg">Read'n'Roll</p>
         </div>
         <div className="ml-auto md:hidden" />
-        <div className="md:w-auto md:flex-grow md:flex md:items-center">
+        {/* TODO: decide what to do with the multi language option */}
+        {/* <div className="md:w-auto md:flex-grow md:flex md:items-center">
           <ul className="flex ml-auto list-none lg:flex-row">
             <li>
               <a
@@ -57,7 +58,7 @@ const Navigation = ({ language }: Props) => (
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </nav>
   </header>

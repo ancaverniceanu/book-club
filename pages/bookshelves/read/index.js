@@ -3,11 +3,6 @@ import Layout from 'components/Layout';
 import React from 'react';
 import PageIntro from 'components/PageIntro';
 
-interface Book {
-  title: string;
-  author: string;
-}
-
 export default function ReadBooks({ books }) {
   const renderBookList = () => {
     return books.map(({ title, author }) => {
