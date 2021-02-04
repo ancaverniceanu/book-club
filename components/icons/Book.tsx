@@ -1,8 +1,8 @@
 import React from 'react';
-import Phone from 'src/img/icons/svg/phone.svg';
+import Book from 'src/img/icons/svg/book.svg';
 
 function Icon() {
-  return <Phone />;
+  return <Book />;
 }
 
 export default Icon;
