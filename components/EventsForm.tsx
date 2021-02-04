@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Layout from 'components/Layout';
-import PageIntro from 'components/PageIntro';
 
 type Form = {
   date?: string;
@@ -8,7 +6,7 @@ type Form = {
   book_author?: string;
 };
 
-const Events = () => {
+const EventsForm = () => {
   const contentType = 'application/json';
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState('');
@@ -72,9 +70,7 @@ const Events = () => {
   };
 
   return (
-    <Layout>
-      <PageIntro title="Events" description="Schedule here your next book club event." />
-
+    <>
       <form className="pb-10 border-b" onSubmit={handleSubmit}>
         <div className="w-full mb-4 lg:w-1/2">
           <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="date">
@@ -141,8 +137,8 @@ const Events = () => {
       {Object.keys(errors).map((err, index) => (
         <li key={index}>{err}</li>
       ))}
-    </Layout>
+    </>
   );
 };
 
-export default Events;
+export default EventsForm;

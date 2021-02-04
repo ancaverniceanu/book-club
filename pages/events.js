@@ -2,6 +2,7 @@ import React from 'react';
 import Page from 'components/Page';
 import Layout from 'components/Layout';
 import StoryblokService from 'utils/storyblok-service';
+import EventsForm from 'components/EventsForm';
 
 export default class extends React.Component {
   constructor(props) {
@@ -16,9 +17,7 @@ export default class extends React.Component {
     StoryblokService.setQuery(query);
     let language = query.language || 'en';
     let insertLanguage = language !== 'en' ? `/${language}` : '';
-    let res = await StoryblokService.get(
-      `cdn/stories${insertLanguage}/bookshelves/currently-reading`,
-    );
+    let res = await StoryblokService.get(`cdn/stories${insertLanguage}/events`);
 
     return {
       res,
@@ -36,6 +35,7 @@ export default class extends React.Component {
     return (
       <Layout language={this.state.language}>
         <Page content={contentOfStory} />
+        <EventsForm />
       </Layout>
     );
   }

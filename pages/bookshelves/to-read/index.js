@@ -1,14 +1,40 @@
-import Layout from 'components/Layout';
 import React from 'react';
-import PageIntro from 'components/PageIntro';
+import Page from 'components/Page';
+import Layout from 'components/Layout';
+import StoryblokService from 'utils/storyblok-service';
 
-export default function ToReadBook() {
-  return (
-    <Layout>
-      <PageIntro
-        title="To read"
-        description="Add here your next book or see what other books are following."
-      />
-    </Layout>
-  );
+export default class extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      story: props.res.data.story,
+      language: props.language,
+    };
+  }
+
+  static async getInitialProps({ query }) {
+    StoryblokService.setQuery(query);
+    let language = query.language || 'en';
+    let insertLanguage = language !== 'en' ? `/${language}` : '';
+    let res = await StoryblokService.get(`cdn/stories${insertLanguage}/bookshelves/to-read`);
+
+    return {
+      res,
+      language,
+    };
+  }
+
+  componentDidMount() {
+    StoryblokService.initEditor(this);
+  }
+
+  render() {
+    const contentOfStory = this.state.story.content;
+
+    return (
+      <Layout language={this.state.language}>
+        <Page content={contentOfStory} />
+      </Layout>
+    );
+  }
 }

@@ -4,12 +4,14 @@ import Feature from './Feature';
 import Grid from './Grid';
 import Placeholder from './Placeholder';
 import Intro from './Intro';
+import Content from './Content';
 
 const Components = {
   teaser: Teaser,
   grid: Grid,
   feature: Feature,
   intro: Intro,
+  content: Content,
 };
 
 const DynamicComponent = ({ blok }) => {

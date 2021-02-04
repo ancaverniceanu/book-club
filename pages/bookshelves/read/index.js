@@ -1,7 +1,6 @@
 import { connectToDatabase } from 'utils/mongodb';
 import Layout from 'components/Layout';
 import React from 'react';
-import PageIntro from 'components/PageIntro';
 
 export default function ReadBooks({ books }) {
   const renderBookList = () => {
@@ -13,7 +12,6 @@ export default function ReadBooks({ books }) {
 
             <header className="flex items-center justify-between p-2 leading-tight md:p-4">
               <h1 className="text-lg">{title}</h1>
-              <p className="text-sm text-grey-darker">[add date???]</p>
             </header>
 
             <footer className="flex items-center justify-between p-2 leading-none md:p-4">
@@ -34,7 +32,6 @@ export default function ReadBooks({ books }) {
 
   return (
     <Layout>
-      <PageIntro title="Read" description="Complete list with books that we read in the past." />
       <div className="flex flex-wrap -mx-3 lg:-mx-4">{renderBookList()}</div>
     </Layout>
   );
