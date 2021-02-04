@@ -7,7 +7,7 @@ const Navigation = () => (
         <div className="mr-4 md:mr-8">
           <a href="/">
             {/* Image by http://www.freepik.com/ */}
-            <img src="/images/logo.png" />
+            <img src="/images/logo.png" width="32" height="32" />
           </a>
         </div>
         <div className="text-black">

@@ -11,6 +11,8 @@ const Teaser = ({ blok }) => {
           src={blok.image && blok.image.filename}
           alt={blok.image && blok.image.alt}
           className={styles.image}
+          width="1023"
+          height="813"
         />
       </div>
     </SbEditable>

@@ -1,13 +1,12 @@
 module.exports = {
-  purge: [],
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
+  purge: false,
   theme: {
-    fontFamily: {
-      'sans': 'Roboto, Arial, sans-serif',
-      'serif': 'Merriweather, Georgia, serif'
-    },
-    extend: {
-    },
+    extend: {},
   },
   variants: {},
   plugins: [],
-}
+};
