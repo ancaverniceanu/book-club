@@ -6,13 +6,12 @@ import StoryblokService from '../utils/storyblok-service';
 
 interface Props {
   children: React.ReactNode;
-  language?: string;
 }
 
-const Layout = ({ children, language }: Props) => (
+const Layout = ({ children }: Props) => (
   <div className="container p-4 mx-auto">
     <Head title="" description="" />
-    <Navigation language={language} />
+    <Navigation />
     {children}
     <Footer />
     {StoryblokService.bridge()}

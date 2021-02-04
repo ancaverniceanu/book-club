@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface Props {
-  language: string;
-}
-
-const Navigation = ({ language }: Props) => (
+const Navigation = () => (
   <header className="w-full bg-white">
     <nav className="" role="navigation">
       <div className="flex flex-wrap items-center pt-4 pb-4 mx-auto md:flex-no-wrap">
